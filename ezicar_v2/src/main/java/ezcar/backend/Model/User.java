@@ -1,9 +1,17 @@
 package ezcar.backend.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
+    
     private String userName;
     private String userPhoneNumber;
+    @Id
     private int userId;
+
+    public User(){}
 
     public User(String username, String userphone, int userId){
         this.userName = username;

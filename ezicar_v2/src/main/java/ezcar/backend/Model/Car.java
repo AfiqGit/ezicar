@@ -1,13 +1,21 @@
 package ezcar.backend.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Car {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int carId;
     private String carName;
     private String carType;
     private String carStatus;
     private float carPrice;
 
+    public Car(){}
 
     public Car(int carId, String carName, String carType, String carStatus, float carPrice){
         this.carId = carId;
